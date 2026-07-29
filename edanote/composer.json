@@ -1,0 +1,25 @@
+{
+    "name": "sakots/edanote",
+    "description": "A oekaki bulletin board built with PHP, Twig and SQLite",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "ext-fileinfo": "*",
+        "ext-mbstring": "*",
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Edanote\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "php tests/run.php"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

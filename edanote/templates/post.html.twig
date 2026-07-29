@@ -1,0 +1,13 @@
+<header class="post-header">
+  {% if post.subject %}<strong>{{ post.subject }}</strong>{% endif %}
+  <span>{{ post.name }}</span>
+  <a href="#post-{{ post.id }}">No.{{ post.id }}</a>
+  <time datetime="{{ post.created_at }}">{{ post.created_at|date('Y-m-d H:i') }}</time>
+</header>
+{% if post.image_name %}
+  <a href="{{ upload_path|default('uploads') }}/{{ post.image_name }}" class="image-link">
+    <img src="{{ upload_path|default('uploads') }}/{{ post.image_name }}"
+         width="{{ post.image_width }}" height="{{ post.image_height }}" loading="lazy" alt="">
+  </a>
+{% endif %}
+<p class="comment">{{ post.comment|nl2br }}</p>
