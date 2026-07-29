@@ -13,28 +13,9 @@ PHP・Twig・SQLiteで動く新しめのお絵かき掲示板です。
 リリース用の完成品は `edanote/` ディレクトリです。Composerを使えないレンタル
 サーバーにも、ディレクトリの中身をそのままFTPで設置できます。
 
-配布ディレクトリを作り直す場合：
+詳しい設置・更新方法は [doc/INSTALL.md](doc/INSTALL.md)を参照してください。
 
-```sh
-composer install --no-dev --prefer-dist
-scripts/package-release.sh
-```
-
-`edanote/` と、FTPアップロード用の `edanote.zip` が生成されます。ZIPが不要なら
-`php scripts/build-release.php` のみを実行してください。
-
-詳しい設置・更新方法は `INSTALL.md` を参照してください。
-
-## 開発環境のセットアップ
-
-```sh
-composer install
-cp config/local.example.php config/local.php
-php -S localhost:8000 -t public public/router.php
-```
-
-`http://localhost:8000` を開いてください。SQLiteデータベースと必要な実行時
-ディレクトリは初回アクセス時に自動作成されます。
+## 設定
 
 設定は `config/` ディレクトリで管理します。
 
@@ -48,12 +29,16 @@ php -S localhost:8000 -t public public/router.php
 
 ## 構成
 
-HTTPの入口は `public/index.php`、Twigテンプレートは `templates/`、アプリケーション
-コードは `src/`、DBやキャッシュなどの可変データは `var/` に置きます。アップロード
-画像のみWeb配信のため `public/uploads/` に保存します。
-
 ## 確認
 
 ```sh
 composer test
 ```
+
+## 更新履歴
+
+すべての更新履歴は[こちら](CHANGELOG.md)を参照してください。
+
+### [2029/07/29]
+
+- リポジトリ生やした
