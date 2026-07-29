@@ -1,0 +1,14 @@
+/config/local.php
+/public/uploads/*
+!/public/uploads/.gitkeep
+/var/cache/*
+!/var/cache/.gitkeep
+/var/data/*
+!/var/data/.gitkeep
+/vendor/
+/edanote/
+!/edanote/
+!/edanote/**
+/*.zip
+/.idea/
+/.vscode/
