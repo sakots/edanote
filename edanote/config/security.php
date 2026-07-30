@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+// セキュリティ設定
+
 return [
   'session_name' => 'edanote_session', // セッション名
   'max_name_length' => 50, // 名前の最大文字数

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+// 投稿、お絵かきのアップロードに関する設定です。
+
 return [
   'directory' => dirname(__DIR__) . '/public/uploads', //設置URL
   // サブディレクトリ設置でも動くよう、掲示板URLからの相対パスにします。

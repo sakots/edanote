@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
+/// SQLite3 データベースファイル関連
+
 return [
-  // SQLite3 データベースファイルのパスとファイル名
-  'path' => dirname(__DIR__) . '/var/data/edanote.db',
+  'databaseName' => 'edanote.db', //ファイル名
+  'dbBusyTimeout' => 5000, // データベースがロックされている場合の待機時間（ミリ秒 0~60000）
 ];
